@@ -27,7 +27,9 @@ public class GameController {
 	}
 
 	public void moveSquare(Game model, Square square) {
+		if (square.getX() <= 640 && square.getX() > 0 && square.getY() <= 480 && square.getY() > 0) {
 		square.setX(square.getX() + model.getSquareDx());
 		square.setY(square.getY() + model.getSquareDy());
+		}
 	}
 }
